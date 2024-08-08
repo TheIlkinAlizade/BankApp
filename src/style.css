@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("boxicons/css/boxicons.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", sans-serif;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-color: #00171F;
+    display: flex;
+    flex-direction: column;
+}
+.header .navbar{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    background-color: #00171F;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    transition: 0.5s;
+}
+.header .navbar ul{
+    display: flex;
+    margin: 0 20px;
+    list-style: none;
+}
+.header .navbar ul li{
+    margin: 0 20px;
+    position: relative;
+    padding: 0 5px;
+}
+.header .navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-family: "DM Sans", sans-serif;
+}
+.header .navbar ul li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    bottom: -3px;
+    left: 0;
+    transition: 0.3s;
+}
+.header .navbar ul li:hover::after{
+    width: 100%;
+}
+
+.header .navbar i{
+    color: #ffffff;
+    margin: 0 10px 0 30px;
+    font-size: 35px;
+}
+.header .navbar .user{
+    height: 150%;
+    aspect-ratio: 1/1;
+    z-index: 1000;
+    border-radius: 50%;
+    position: absolute;
+    border: 4px solid #ffffff;
+    right: 2%;
+    top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+.header .navbar .userbigger{
+    height: 250%;
+    right: 4%;
+}
+.header .navbar .user img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+/* Content */
+
+.header .content{
+    width: 100%;
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.header .content .title{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0100fe;
+    font-family: "Work Sans", sans-serif;
+
+}
+.header .content .image{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.header .content .image .services{
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header .content .image img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 200;
+}
+.header .content .title .texts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-size: 50px;
+    padding: 0 50px;
+    font-family: "Work Sans", sans-serif;
+    color: #ffffff;
+}
+.header .content .title .texts h1{
+    font-size: 1em;
+    font-weight: 100;
+}
+.header .content .title .texts p{
+    font-size: 1.1em;
+    font-weight: 100;
+}
+.header .content .image .joinbtn{
+    min-width: 200px;
+    height: 40px;
+    font-size: 30px;
+    background-color: white;
+    padding: 10px 10px;
+    border: 1px solid black;
+    border-radius: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 0.5s;
+    margin: 10px;
+    font-family: "Work Sans", sans-serif;
+
+    max-width: fit-content;
+}
+.header .content .image .joinbtn:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.5s;
+}
+
+/* SIGNINUP */
+.header .contentform{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.contentform .formtitle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    font-family: "Work Sans", sans-serif;
+
+}
+.contentform .formtitle h1{
+    margin: 20px 0 0 0;
+    color: #ffffff;
+    font-family: "Work Sans", sans-serif;
+
+}
+
+.contentform .image{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    transition: 0.5s;
+    transform: translateX(100%);
+    background-color: #0100fe;
+    display: flex;
+}
+.contentform .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contentform .image h1{
+    color: #ffffff;
+    text-align: center;
+    font-family: "Work Sans", sans-serif;
+
+    margin: auto;
+}
+.contentform .contentformleft{
+    transition: 0.5s;
+    transform: translateX(0);
+}
+.contentform .formtitle form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 70vh;
+    width: 400px;
+    background-color: #0100fe;
+    color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.2) -20px 16px 9px, rgba(0, 0, 0, 0.1) 0px 11px 9px;
+    transition: 0.5s;
+}
+.contentform .formtitle form:nth-of-type(2){
+    box-shadow: rgba(0, 0, 0, 0.2) 20px 16px 9px, rgba(0, 0, 0, 0.1) 0px 11px 9px;
+}
+.contentform .formtitle form a{
+    color: #ffffff;
+}
+.contentform .formtitle form a:hover{
+    text-decoration: underline;
+}
+
+.contentform .formtitle .fakeform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    height: 70vh;
+    width: 400px;
+    background-color: transparent;
+    color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0) -20px 16px 9px;
+    opacity: 0;
+    transition: 0;
+}
+
+.contentform .formtitle form input{
+    margin: 30px 40px;
+    width: 70%;
+    height: 45px;
+    padding: 0 20px;
+    border: 1px solid black;
+    border-radius: 25px;
+    font-family: "Work Sans", sans-serif;
+
+    font-size: 17px;
+}
+.contentform .formtitle form input[type="submit"]{
+    width: 120px;
+    padding: 0;
+    cursor: pointer;
+    background-color: #00171F;
+    color: #ffffff;
+}
+
+.backbtn{
+    position: absolute;
+    width: 90px;
+    aspect-ratio: 2/1;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 20%;
+    left: 3%;
+    bottom: 90%;
+    font-size: 30px;
+}
+.backbtn a{
+    color: #00171F;
+    text-decoration: none;
+}
+
+/* Profile */
+
+.content .sidebar, .content .list{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Work Sans", sans-serif;
+
+    position: relative;
+}
+.content .sidebar{
+    width: 17%;
+    background-color: #0100fe;
+    justify-content: start;
+    transition: 0.5s;
+}
+.content .list{
+    width: 83%;
+    background-color: #ffffff;
+    overflow: hidden;
+    overflow-y: scroll;
+    transition: 0.5s;
+
+}
+
+.content .sidebar .texts{
+    color: #ffffff;
+    font-size: 15px;
+    text-align: left;
+    max-width: 100%;
+    height: max-content;
+    word-break: normal;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+.content .sidebar .options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    font-size: 23px;
+    color: #ffffff;
+    position: relative;
+}
+.content .sidebar .options .option{
+    width: 100%;
+    height: 40px;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content .sidebar .options .option input{
+    opacity: 0;
+    cursor: pointer;
+}
+.content .sidebar .options .option label{
+    transition: 0.2s;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+.content .sidebar .options .option input:checked~label{
+    opacity: 1;
+    transition: 0.2s;
+    border-bottom: 2px solid #ffffff;
+}
+.content .list ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    color: #00171F;
+    text-align: left;
+    width: 90%;
+    height: 100%;
+    position: relative;
+    margin-top: 10px;
+}
+.content .list ul li{
+    width: 100%;
+    margin: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+}
+.content .list ul li span{
+    font-size: 40px;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #00171F;
+    color: #00171F;
+    font-weight: 400;
+    text-transform: capitalize;
+    cursor: default;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* CARD FORM  */
+
+.content .cardform{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+.content .cardform .inputs{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.content .cardform .inputs form{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.content .cardform .inputs form .input{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+}
+.content .cardform .inputs form .input label{
+    font-size: 25px;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    color: #00171F;
+    cursor: pointer;
+}
+.content .cardform .inputs form .input input{
+    margin: 20px;
+    width: 270px;
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    padding: 0 20px;
+    border: 1px solid #ffffff;
+    transition: 0.5s;
+}
+.content .cardform .inputs form .input input:focus{
+    outline: none;
+    border: 1px solid #00171F;
+    transition: 0.5s;
+    scale: 1.07;
+    transform: translateX(3.5%);
+}
+.content .cardform .inputs form input[type="submit"]{
+    min-width: 200px;
+    max-width: max-content;
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid #00171F;
+    font-size: 20px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    .header .content .title{
+        width: 100%;
+        height: 50%;
+    }
+    .header .content .image{
+        width: 100%;
+        height: 50%;
+        align-items: start;
+    }
+    .content .sidebar{
+        width: 100%;
+        height: 90px;
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+    }
+    .content .sidebar .texts{
+        font-size: 10px;
+        width: 100%;
+        height: 35px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+    .content .sidebar .options{
+        border-top: 1px solid #ffffff;
+        width: 100%;
+        height: 55px;
+        display: flex;
+        flex-direction: row;
+        font-size: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    .content .sidebar .options .option{
+        width: 22%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        align-items: center;
+    }
+    .user, .userbigger{
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .header .navbar ul li{
+        margin: 0 10px;
+        padding: 0;
+        font-size: 12px;
+    }
+    .header .navbar ul li a{
+        margin: 0;
+        padding: 0;
+    }
+    .content .list{
+        width: 100%;
+    }
+    .content .list ul li{
+        margin: 15px 0;
+    }
+    .content .list ul li span{
+        font-size: 20px;
+        width: max-content;
+    }
+    .contentform .formtitle{
+        justify-content: start;
+        overflow: hidden;
+    }
+    .contentform .formtitle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contentform .formtitle form{
+        width: 90%;
+    }
+    .contentform .formtitle form:nth-of-type(2){
+        display: none;
+    }
+    .contentform .image{
+        display: none;
+    }
+    
+}
